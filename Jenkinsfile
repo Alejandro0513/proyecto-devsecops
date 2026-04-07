@@ -33,7 +33,7 @@ pipeline {
                 sh 'docker stop app-produccion || true'
                 sh 'docker rm app-produccion || true'
                 // Arrancamos el nuevo
-                sh 'docker run -d --name app-produccion -p 80:80 mi-app-segura:latest'
+                sh 'docker run -d --name app-produccion -p 80:80 mi-app-segura:latest tail -f /dev/null'
             }
         }
     }
